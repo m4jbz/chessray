@@ -48,16 +48,22 @@ Pieces init_pieces()
     return pieces;
 }
 
-Textures load_textures(Pieces pieces)
+Pieces load_textures(Pieces pieces)
 {
-    Textures textures;
+    float y = 50.0f;
+
     for (int i = 0; i < N; i++) {
+        float x = 50.0f;
         for (int j = 0; j < N; j++) {
-            textures[i][j] = LoadTextureFromImage(pieces[i][j].image);
+            pieces[i][j].texture = LoadTextureFromImage(pieces[i][j].image);
+            pieces[i][j].x = x;
+            pieces[i][j].y = y;
+            x += 125.0f;
         }
+        y += 125.0f;
     }
 
-    return textures;
+    return pieces;
 }
 
 void unload_images(Pieces pieces)

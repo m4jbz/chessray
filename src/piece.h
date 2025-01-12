@@ -29,13 +29,15 @@ struct Piece {
     PieceType type;
     PieceColor color;
     Image image;
+    Texture2D texture;
+    float x;
+    float y;
 };
 
 using Pieces = array<array<Piece, N>, N>;
-using Textures = array<array<Texture2D, N>, N>;
 
 Pieces init_pieces();
-Textures load_textures(Pieces pieces);
+Pieces load_textures(Pieces pieces);
 void unload_images(Pieces pieces);
 
 #endif

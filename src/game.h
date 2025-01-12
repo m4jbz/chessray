@@ -11,7 +11,9 @@
 #define WIDTH 1100
 #define HEIGHT 1100
 
-void draw_init_position(Textures textures);
+void draw_current_position(Pieces pieces);
 void draw_board();
+bool is_mouse_over_piece(int x, int y, Pieces pieces);
+void check_mouse_position(Pieces &pieces);
 
 #endif

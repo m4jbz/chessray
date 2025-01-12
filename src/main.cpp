@@ -1,14 +1,14 @@
 #include <raylib.h>
 #include "game.h"
 #include "piece.h"
+#include <stdio.h>
 
 int main(void)
 {
     Pieces pieces = init_pieces();
-    bool first_move_was_made = false;
 
     InitWindow(WIDTH, HEIGHT, "Chessray");
-    Textures textures = load_textures(pieces);
+    pieces = load_textures(pieces);
     unload_images(pieces);
 
     /* FPS */
@@ -21,7 +21,8 @@ int main(void)
         DrawFPS(10, 10);
 
         draw_board();
-        if (!first_move_was_made) draw_init_position(textures);
+        draw_current_position(pieces);
+        check_mouse_position(pieces);
 
         EndDrawing();
     }
