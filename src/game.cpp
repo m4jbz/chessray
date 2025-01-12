@@ -58,8 +58,8 @@ void check_mouse_position(Pieces &pieces)
         int i = get_index(mouse_y);
         int j = get_index(mouse_x);
         if (is_mouse_over_piece(mouse_x, mouse_y, pieces)) {
-            pieces[i][j].x = mouse_x - (125/2);
-            pieces[i][j].y = mouse_y - (125/2);
+            pieces[i][j].x = mouse_x - (125/2.0f);
+            pieces[i][j].y = mouse_y - (125/2.0f);
         }
     }
 }
