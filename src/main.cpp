@@ -1,7 +1,6 @@
 #include <raylib.h>
 #include "game.h"
 #include "piece.h"
-#include <stdio.h>
 
 int main(void)
 {

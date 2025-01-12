@@ -1,5 +1,6 @@
 #include "piece.h"
 #include <raylib.h>
+#include <iostream>
 
 Pieces init_pieces()
 {

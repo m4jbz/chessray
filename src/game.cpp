@@ -1,6 +1,5 @@
 #include "game.h"
 #include <raylib.h>
-#include <stdio.h>
 
 void draw_current_position(Pieces pieces)
 {
